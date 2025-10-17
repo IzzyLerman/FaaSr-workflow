@@ -139,19 +139,6 @@ def generate_github_secret_imports(faasr_payload):
     return import_statements
 
 
-def generate_user_defined_secret_imports(faasr_payload):
-    """Generate user-defined secret imports for the workflow (applies to all functions)"""
-    import_statements = []
-
-    for secret_name in faasr_payload.get("Secrets", []):
-        import_statements.append(f"{secret_name}: ${{{{ secrets.{secret_name}}}}}")
-
-    indent = " " * 20
-    import_statements = "\n".join(f"{indent}{s}" for s in import_statements)
-
-    return import_statements
-
-
 def generate_serverless_yaml(action_name, container_image, secret_imports):
     """Generate YAML for serverless (GitHub-hosted runner)"""
     return textwrap.dedent(
@@ -392,7 +379,9 @@ def deploy_to_aws(workflow_data):
         sys.exit(1)
 
     # Get AWS credentials
-    aws_access_key, aws_secret_key, aws_region, aws_arn = get_lambda_credentials(workflow_data)
+    aws_access_key, aws_secret_key, aws_region, aws_arn = get_lambda_credentials(
+        workflow_data
+    )
 
     lambda_client = boto3.client(
         "lambda",
