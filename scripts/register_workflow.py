@@ -392,9 +392,7 @@ def deploy_to_aws(workflow_data):
         sys.exit(1)
 
     # Get AWS credentials
-    aws_access_key, aws_secret_key, aws_region, aws_arn = get_lambda_credentials(
-        workflow_data
-    )
+    aws_access_key, aws_secret_key, aws_region, aws_arn = get_lambda_credentials(workflow_data)
 
     lambda_client = boto3.client(
         "lambda",
