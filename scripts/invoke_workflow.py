@@ -165,6 +165,5 @@ def main(testing: bool = False) -> FaaSrPayload:
 
     return workflow
 
-
 if __name__ == "__main__":
     main()
