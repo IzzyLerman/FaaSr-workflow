@@ -1,6 +1,6 @@
 {
   "ActionList": {
-    "add": {
+    "add_func": {
       "Arguments": {
         "num1": "56",
         "num2": "18"
@@ -28,9 +28,9 @@
     }
   },
   "ActionContainers": {
-    "add": "izzylerman/faasr-githubactions-julia:latest"
+    "add_func": "izzylerman/faasr-githubactions-julia:latest"
   },
-  "FunctionInvoke": "add",
+  "FunctionInvoke": "add_func",
   "DefaultDataStore": "S3",
   "FunctionGitRepo": {
     "add": "IzzyLerman/julia-functions"
