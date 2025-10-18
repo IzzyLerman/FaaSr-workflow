@@ -7,7 +7,7 @@
       },
       "InvokeNext": [],
       "FaaSServer": "GH",
-      "Type": "R",
+      "Type": "Julia",
       "FunctionName": "add"
     }
   },
