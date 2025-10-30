@@ -36,6 +36,7 @@
     "S3": {
       "Writable": "TRUE",
       "Endpoint": "https://play.min.io",
+      "Region": "none",
       "Bucket": "jltest2025"
     }
   },
