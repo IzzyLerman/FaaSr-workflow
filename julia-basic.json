@@ -2,8 +2,8 @@
   "ActionList": {
     "add-func": {
       "Arguments": {
-        "num1": "56",
-        "num2": "18"
+        "num1": 56,
+        "num2": 18
       },
       "InvokeNext": [
         "add-func2"
@@ -16,8 +16,8 @@
       "FunctionName": "add",
       "FaaSServer": "GH",
       "Arguments": {
-        "num1": "56",
-        "num2": "18"
+        "num1": 56,
+        "num2": 18
       },
       "InvokeNext": [],
       "Type": "Julia"
