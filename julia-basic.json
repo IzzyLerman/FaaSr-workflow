@@ -45,6 +45,7 @@
     "add-func2": "izzylerman/faasr-githubactions-julia:latest"
   },
   "FunctionInvoke": "add-func",
+  "InvocationID": "",
   "DefaultDataStore": "S3",
   "FunctionGitRepo": {
     "add": "IzzyLerman/julia-functions"
