@@ -1,6 +1,6 @@
 {
   "ActionList": {
-    "add_func": {
+    "add-func": {
       "Arguments": {
         "num1": "56",
         "num2": "18"
@@ -12,7 +12,7 @@
       "Type": "Julia",
       "FunctionName": "add"
     },
-    "add_func2": {
+    "add-func2": {
       "FunctionName": "add",
       "FaaSServer": "GH",
       "Arguments": {
