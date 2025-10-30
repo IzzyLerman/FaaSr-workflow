@@ -28,7 +28,7 @@ jobs:
       - name: Install development FaaSr_py
         run: |
           git clone https://github.com/IzzyLerman/FaaSr-Backend-julia.git
-          pip install -e ./FaaSr_py
+          pip install -e ./FaaSr-Backend-julia
 
       - name: Install OpenWhisk CLI
         run: |
