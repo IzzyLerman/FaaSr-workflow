@@ -6,7 +6,7 @@
         "num2": "18"
       },
       "InvokeNext": [
-        "add_func2"
+        "add-func2"
       ],
       "FaaSServer": "GH",
       "Type": "Julia",
@@ -40,10 +40,10 @@
     }
   },
   "ActionContainers": {
-    "add_func": "izzylerman/faasr-githubactions-julia:latest",
-    "add_func2": "izzylerman/faasr-githubactions-julia:latest"
+    "add-func": "izzylerman/faasr-githubactions-julia:latest",
+    "add-func2": "izzylerman/faasr-githubactions-julia:latest"
   },
-  "FunctionInvoke": "add_func",
+  "FunctionInvoke": "add-func",
   "DefaultDataStore": "S3",
   "FunctionGitRepo": {
     "add": "IzzyLerman/julia-functions"
