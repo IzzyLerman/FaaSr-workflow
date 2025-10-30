@@ -5,10 +5,22 @@
         "num1": "56",
         "num2": "18"
       },
-      "InvokeNext": [],
+      "InvokeNext": [
+        "add_func2"
+      ],
       "FaaSServer": "GH",
       "Type": "Julia",
       "FunctionName": "add"
+    },
+    "add_func2": {
+      "FunctionName": "add",
+      "FaaSServer": "GH",
+      "Arguments": {
+        "num1": "56",
+        "num2": "18"
+      },
+      "InvokeNext": [],
+      "Type": "Julia"
     }
   },
   "ComputeServers": {
@@ -28,7 +40,8 @@
     }
   },
   "ActionContainers": {
-    "add_func": "izzylerman/faasr-githubactions-julia:latest"
+    "add_func": "izzylerman/faasr-githubactions-julia:latest",
+    "add_func2": "izzylerman/faasr-githubactions-julia:latest"
   },
   "FunctionInvoke": "add_func",
   "DefaultDataStore": "S3",
