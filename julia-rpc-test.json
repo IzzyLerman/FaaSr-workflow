@@ -1,0 +1,55 @@
+{
+  "ActionList": {
+    "rpc-test": {
+      "Arguments": {},
+      "InvokeNext": [
+        "add-func2"
+      ],
+      "FaaSServer": "GH",
+      "Type": "Julia",
+      "FunctionName": "juliaRpcTest"
+    },
+    "add-func2": {
+      "FunctionName": "add",
+      "FaaSServer": "GH",
+      "Arguments": {
+        "num1": 56,
+        "num2": 18
+      },
+      "InvokeNext": [],
+      "Type": "Julia"
+    }
+  },
+  "ComputeServers": {
+    "GH": {
+      "FaaSType": "GitHubActions",
+      "UseSecretStore": true,
+      "ActionRepoName": "FaaSr-workflow",
+      "Branch": "main",
+      "UserName": "izzylerman"
+    }
+  },
+  "DataStores": {
+    "S3": {
+      "Writable": "TRUE",
+      "Endpoint": "https://play.min.io",
+      "Region": "none",
+      "Bucket": "jltest2025"
+    }
+  },
+  "ActionContainers": {
+    "rpc-test": "izzylerman/faasr-githubactions-julia:latest",
+    "add-func2": "izzylerman/faasr-githubactions-julia:latest"
+  },
+  "FunctionInvoke": "rpc-test",
+  "InvocationID": "",
+  "InvocationTimestamp": "",
+  "DefaultDataStore": "S3",
+  "FunctionGitRepo": {
+    "juliaRpcTest": "IzzyLerman/julia-functions",
+    "add": "IzzyLerman/julia-functions"
+  },
+  "FaaSrLog": "FaaSrLog",
+  "LoggingDataStore": "S3",
+  "WorkflowName": "julia-rpc-test"
+}
