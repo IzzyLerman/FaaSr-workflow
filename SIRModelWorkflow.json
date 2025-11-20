@@ -1,0 +1,47 @@
+{
+  "ActionList": {
+    "init": {
+      "InvokeNext": [
+        "juliaSIRModel"
+      ],
+      "FaaSServer": "GH",
+      "Type": "R",
+      "FunctionName": "createData"
+    },
+    "juliaSIRModel": {
+      "InvokeNext": [],
+      "FaaSServer": "GH",
+      "Type": "R",
+      "FunctionName": "solveSIRModel"
+    }
+  },
+  "ComputeServers": {
+    "GH": {
+      "FaaSType": "GitHubActions",
+      "UseSecretStore": true,
+      "ActionRepoName": "FaaSr-workflow",
+      "Branch": "main",
+      "UserName": "IzzyLerman"
+    }
+  },
+  "DataStores": {
+    "S3": {
+      "Writable": "TRUE",
+      "Endpoint": "https://play.min.io",
+      "Bucket": "faasr-sir-model-workflow"
+    }
+  },
+  "ActionContainers": {
+    "init": "izzylerman/faasr-githubactions-julia-sir",
+    "juliaSIRModel": "izzylerman/faasr-githubactions-julia-sir"
+  },
+  "FunctionInvoke": "init",
+  "DefaultDataStore": "S3",
+  "FunctionGitRepo": {
+    "createData": "IzzyLerman/julia-functions",
+    "solveSIRModel": "IzzyLerman/julia-functions"
+  },
+  "FaaSrLog": "FaaSrLog",
+  "LoggingDataStore": "S3",
+  "WorkflowName": "SIRModelWorkflow.json"
+}
