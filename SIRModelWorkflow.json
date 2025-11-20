@@ -43,5 +43,5 @@
   },
   "FaaSrLog": "FaaSrLog",
   "LoggingDataStore": "S3",
-  "WorkflowName": "SIRModelWorkflow.json"
+  "WorkflowName": "SIRModelWorkflow"
 }
