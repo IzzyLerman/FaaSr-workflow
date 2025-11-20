@@ -5,13 +5,13 @@
         "juliaSIRModel"
       ],
       "FaaSServer": "GH",
-      "Type": "R",
+      "Type": "Julia",
       "FunctionName": "createData"
     },
     "juliaSIRModel": {
       "InvokeNext": [],
       "FaaSServer": "GH",
-      "Type": "R",
+      "Type": "Julia",
       "FunctionName": "solveSIRModel"
     }
   },
