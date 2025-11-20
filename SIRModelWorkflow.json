@@ -28,7 +28,8 @@
     "S3": {
       "Writable": "TRUE",
       "Endpoint": "https://play.min.io",
-      "Bucket": "faasr-sir-model-workflow"
+      "Bucket": "faasr-sir-model-workflow",
+      "Region": "none"
     }
   },
   "ActionContainers": {
