@@ -59,8 +59,7 @@
     "getSIRData": [
       "numpy",
       "pandas",
-      "math",
-      "datetime"
+      "math"
     ]
   }
 }
