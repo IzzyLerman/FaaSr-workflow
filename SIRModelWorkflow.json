@@ -41,7 +41,7 @@
     }
   },
   "ActionContainers": {
-    "juliaSIRModel": "izzylerman/faasr-githubactions-julia-sir",
+    "solve": "izzylerman/faasr-githubactions-julia-sir",
     "getData": "ghcr.io/faasr/github-actions-python:latest",
     "processData": "ghcr.io/faasr/github-actions-r:latest"
   },
