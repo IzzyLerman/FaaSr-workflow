@@ -1,0 +1,62 @@
+{
+  "ActionList": {
+    "solve": {
+      "FunctionName": "solveSIRModel",
+      "FaaSServer": "AWS",
+      "InvokeNext": [
+        "processData"
+      ],
+      "Type": "Julia"
+    },
+    "getData": {
+      "FunctionName": "getSIRData",
+      "FaaSServer": "AWS",
+      "InvokeNext": [
+        "solve"
+      ],
+      "Type": "Python"
+    },
+    "processData": {
+      "FunctionName": "processSIRData",
+      "FaaSServer": "AWS",
+      "InvokeNext": [],
+      "Type": "R"
+    }
+  },
+  "ComputeServers": {
+    "AWS": {
+      "FaaSType": "Lambda",
+      "UseSecretStore": true,
+      "Region": "us-east-1"
+    }
+  },
+  "DataStores": {
+    "S3": {
+      "Bucket": "faasr-sirmodel",
+      "Region": "us-east-1",
+      "Endpoint": "s3.us-east-1.amazonaws.com"
+    }
+  },
+  "ActionContainers": {
+    "solve": "izzylerman/faasr-githubactions-julia-sir",
+    "getData": "izzylerman/faasr-github-actions-python:latest",
+    "processData": "izzylerman/faasr-github-actions-r:latest"
+  },
+  "FunctionInvoke": "getData",
+  "DefaultDataStore": "S3",
+  "FunctionGitRepo": {
+    "solveSIRModel": "IzzyLerman/SIRWorkflow",
+    "getSIRData": "IzzyLerman/SIRWorkflow",
+    "processSIRData": "IzzyLerman/SIRWorkflow"
+  },
+  "FaaSrLog": "FaaSrLog",
+  "LoggingDataStore": "S3",
+  "WorkflowName": "SIRModelWorkflow",
+  "PyPIPackageDownloads": {
+    "getSIRData": [
+      "numpy",
+      "pandas",
+      "math"
+    ]
+  }
+}
