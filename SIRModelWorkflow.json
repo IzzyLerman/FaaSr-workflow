@@ -61,5 +61,10 @@
       "pandas",
       "math"
     ]
+  },
+  "JuliaPkgPackage": {
+    "solve": [
+        "plots"
+    ]
   }
 }
