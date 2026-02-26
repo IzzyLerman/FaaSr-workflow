@@ -64,7 +64,10 @@
   },
   "JuliaPkgPackage": {
     "solve": [
-        "plots"
+        "Plots",
+        "DifferentialEquations",
+        "DataFrames",
+        "CSV"
     ]
   }
 }
