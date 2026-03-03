@@ -63,7 +63,7 @@
     ]
   },
   "JuliaPkgPackage": {
-    "solve": [
+    "solveSIRModel": [
         "Plots",
         "DifferentialEquations",
         "DataFrames",
