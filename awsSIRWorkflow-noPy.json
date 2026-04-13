@@ -1,0 +1,53 @@
+{
+  "ActionList": {
+    "solve": {
+      "FunctionName": "solveSIRModel",
+      "FaaSServer": "AWS",
+      "InvokeNext": [
+        "processData"
+      ],
+      "Type": "Julia"
+    },
+    "processData": {
+      "FunctionName": "processSIRData",
+      "FaaSServer": "AWS",
+      "InvokeNext": [],
+      "Type": "R"
+    }
+  },
+  "ComputeServers": {
+    "AWS": {
+      "FaaSType": "Lambda",
+      "UseSecretStore": true,
+      "Region": "us-east-1"
+    }
+  },
+  "DataStores": {
+    "S3": {
+      "Bucket": "faasr-sirmodel",
+      "Region": "us-east-1",
+      "Endpoint": "s3.us-east-1.amazonaws.com"
+    }
+  },
+  "ActionContainers": {
+    "solve": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr:latest",
+    "processData": "145342739029.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-r:latest"
+  },
+  "FunctionInvoke": "solve",
+  "DefaultDataStore": "S3",
+  "FunctionGitRepo": {
+    "solveSIRModel": "IzzyLerman/SIRWorkflow",
+    "processSIRData": "IzzyLerman/SIRWorkflow"
+  },
+  "FaaSrLog": "FaaSrLog",
+  "LoggingDataStore": "S3",
+  "WorkflowName": "SIRModelWorkflow",
+   "JuliaPkgPackage": {
+    "solveSIRModel": [
+        "Plots",
+        "DifferentialEquations",
+        "DataFrames",
+        "CSV"
+    ]
+  }
+}
