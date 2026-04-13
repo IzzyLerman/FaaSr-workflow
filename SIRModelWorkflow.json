@@ -34,10 +34,9 @@
   },
   "DataStores": {
     "S3": {
-      "Writable": "TRUE",
-      "Endpoint": "https://play.min.io",
       "Bucket": "faasr-sirmodel",
-      "Region": "none"
+      "Region": "us-east-1",
+      "Endpoint": "http://s3.us-east-1.amazonaws.com"
     }
   },
   "ActionContainers": {
