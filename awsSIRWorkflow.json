@@ -39,7 +39,7 @@
   },
   "ActionContainers": {
     "solve": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr:latest",
-    "getData": "145342739029.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-python:latest",
+    "getData": "145342739029.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-python:2.0.4",
     "processData": "145342739029.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-r:latest"
   },
   "FunctionInvoke": "getData",
