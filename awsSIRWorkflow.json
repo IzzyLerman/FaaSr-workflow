@@ -38,9 +38,9 @@
     }
   },
   "ActionContainers": {
-    "solve": "izzylerman/faasr-githubactions-julia-sir",
-    "getData": "izzylerman/faasr-github-actions-python:latest",
-    "processData": "izzylerman/faasr-github-actions-r:latest"
+    "solve": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr:latest",
+    "getData": "145342739029.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-python:latest",
+    "processData": "145342739029.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-r:latest"
   },
   "FunctionInvoke": "getData",
   "DefaultDataStore": "S3",
@@ -57,6 +57,14 @@
       "numpy",
       "pandas",
       "math"
+    ]
+  },
+   "JuliaPkgPackage": {
+    "solveSIRModel": [
+        "Plots",
+        "DifferentialEquations",
+        "DataFrames",
+        "CSV"
     ]
   }
 }
