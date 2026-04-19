@@ -34,7 +34,7 @@
     "S3": {
       "Bucket": "faasr-sirmodel",
       "Region": "us-east-1",
-      "Endpoint": "s3.us-east-1.amazonaws.com"
+      "Endpoint": "http://s3.us-east-1.amazonaws.com"
     }
   },
   "ActionContainers": {
