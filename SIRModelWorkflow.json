@@ -34,7 +34,7 @@
   },
   "DataStores": {
     "S3": {
-      "Bucket": "faasr-sirmodel",
+      "Bucket": "gh-sirmodel",
       "Region": "us-east-1",
       "Endpoint": "http://s3.us-east-1.amazonaws.com"
     }
