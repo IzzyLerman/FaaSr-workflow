@@ -1,0 +1,60 @@
+{
+  "ActionList": {
+    "func1": {
+      "FunctionName": "jlFunc1",
+      "FaaSServer": "GH",
+      "InvokeNext": [
+        "func2"
+      ],
+      "Type": "Julia"
+    },
+    "func2": {
+      "FunctionName": "jlFunc2",
+      "FaaSServer": "GH",
+      "Type": "Julia"
+    }
+  },
+  "ComputeServers": {
+    "GH": {
+      "FaaSType": "GitHubActions",
+      "UseSecretStore": true,
+      "ActionRepoName": "FaaSr-workflow",
+      "Branch": "main",
+      "UserName": "IzzyLerman"
+    }
+  },
+  "DataStores": {
+    "S3": {
+      "Bucket": "gh-sirmodel",
+      "Region": "us-east-1",
+      "Endpoint": "http://s3.us-east-1.amazonaws.com"
+    }
+  },
+  "ActionContainers": {
+    "func1": "izzylerman/faasr-githubactions-julia-sir:latest",
+    "func2": "izzylerman/faasr-githubactions-julia-sir:latest"
+  },
+  "FunctionInvoke": "func1",
+  "DefaultDataStore": "S3",
+  "FunctionGitRepo": {
+    "jlFunc1": "IzzyLerman/jlTestWorkflow",
+    "jlFunc2": "IzzyLerman/jlTestWorkflow"
+  },
+  "FaaSrLog": "FaaSrLog",
+  "LoggingDataStore": "S3",
+  "WorkflowName": "jlTestWorkflow",
+  "JuliaPkgPackage": {
+    "jlFunc1": [
+        "Plots",
+        "DifferentialEquations",
+        "DataFrames",
+        "CSV"
+    ],
+    "jlFunc2": [
+        "Plots",
+        "DifferentialEquations",
+        "DataFrames",
+        "CSV"
+    ]
+  }
+}
