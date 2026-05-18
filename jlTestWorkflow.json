@@ -42,5 +42,4 @@
   "FaaSrLog": "FaaSrLog",
   "LoggingDataStore": "S3",
   "WorkflowName": "jlTestWorkflow"
-  }
 }
