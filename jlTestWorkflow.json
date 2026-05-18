@@ -1,7 +1,7 @@
 {
   "ActionList": {
     "func1": {
-      "FunctionName": "jlFunc1",
+      "FunctionName": "basic",
       "FaaSServer": "GH",
       "InvokeNext": [
         "func2"
@@ -9,7 +9,7 @@
       "Type": "Julia"
     },
     "func2": {
-      "FunctionName": "jlFunc2",
+      "FunctionName": "basic",
       "FaaSServer": "GH",
       "Type": "Julia"
     }
@@ -37,24 +37,10 @@
   "FunctionInvoke": "func1",
   "DefaultDataStore": "S3",
   "FunctionGitRepo": {
-    "jlFunc1": "IzzyLerman/jlTestWorkflow",
-    "jlFunc2": "IzzyLerman/jlTestWorkflow"
+    "basic": "IzzyLerman/jlTestWorkflow"
   },
   "FaaSrLog": "FaaSrLog",
   "LoggingDataStore": "S3",
-  "WorkflowName": "jlTestWorkflow",
-  "JuliaPkgPackage": {
-    "jlFunc1": [
-        "Plots",
-        "DifferentialEquations",
-        "DataFrames",
-        "CSV"
-    ],
-    "jlFunc2": [
-        "Plots",
-        "DifferentialEquations",
-        "DataFrames",
-        "CSV"
-    ]
+  "WorkflowName": "jlTestWorkflow"
   }
 }
