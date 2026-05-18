@@ -26,8 +26,7 @@
   "DataStores": {
     "S3": {
       "Bucket": "gh-sirmodel",
-      "Region": "us-east-1",
-      "Endpoint": "http://s3.us-east-1.amazonaws.com"
+      "Endpoint": "https://play.min.io"
     }
   },
   "ActionContainers": {
