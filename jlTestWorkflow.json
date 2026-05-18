@@ -26,6 +26,7 @@
   "DataStores": {
     "S3": {
       "Bucket": "gh-sirmodel",
+      "Region": "none",
       "Endpoint": "https://play.min.io"
     }
   },
