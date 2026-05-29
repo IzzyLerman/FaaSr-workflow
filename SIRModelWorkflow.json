@@ -60,13 +60,5 @@
       "pandas",
       "math"
     ]
-  },
-  "JuliaPkgPackage": {
-    "solveSIRModel": [
-        "Plots",
-        "DifferentialEquations",
-        "DataFrames",
-        "CSV"
-    ]
   }
 }
