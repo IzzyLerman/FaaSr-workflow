@@ -40,7 +40,7 @@
     }
   },
   "ActionContainers": {
-    "solve": "izzylerman/faasr-githubactions-julia-sir",
+    "solve": "izzylerman/faasr-githubactions-julia-sir:1.1",
     "getData": "izzylerman/faasr-github-actions-python:latest",
     "processData": "izzylerman/faasr-github-actions-r:latest"
   },
