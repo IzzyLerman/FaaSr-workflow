@@ -38,7 +38,7 @@
     }
   },
   "ActionContainers": {
-    "solve": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr:latest",
+    "solve": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr:1.1",
     "getData": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr/python:latest",
     "processData": "742858820208.dkr.ecr.us-east-1.amazonaws.com/faasr/r:latest"
   },
